@@ -1,0 +1,113 @@
+<main class="bd-masthead" id="content" role="main" aria-labelledby="bootstrap-heading">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-md-2 d-flex justify-content-center">
+        <picture class="img-fluid mb-3 mb-md-0" aria-hidden="false" role="img" aria-label="Ilustração da pilha do Bootstrap">
+          
+          <source srcset="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-stack-768.png 768w, {{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-stack-1024.png 1024w" sizes="(max-width: 767px) 90vw, 50vw">
+          <img src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-stack.png"
+               alt="Exemplo de pilha de tecnologias do Bootstrap (ícones e camadas)"
+               width="1024" height="860"
+               class="img-fluid mb-3 mb-md-0"
+               loading="lazy"
+               decoding="async">
+        </picture>
+      </div>
+
+      <div class="col-12 col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h1 id="bootstrap-heading" class="mb-3 bd-text-purple-bright">Bootstrap</h1>
+        <p class="lead">
+          Crie projetos responsivos para dispositivos móveis na web com a biblioteca de componentes front-end mais popular do mundo.
+        </p>
+        <p class="lead mb-4">
+          O Bootstrap é uma ferramenta gratuita para desenvolvimento HTML, CSS e JS. Crie protótipos rapidamente ou aplicações completas com nossas variáveis e mixins Sass, sistemas de grid responsivo, componentes pré-construídos e poderosos plugins com jQuery.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row lead mb-3">
+         
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/"
+             class="btn btn-lg btn-bd-primary mb-3 mb-md-0 mr-md-3"
+             data-ga-category="Jumbotron actions"
+             data-ga-action="Get started"
+             data-ga-label="Get started"
+             aria-label="Começar com Bootstrap">
+            Começar
+          </a>
+
+          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/"
+             class="btn btn-lg btn-outline-secondary"
+             data-ga-category="Jumbotron actions"
+             data-ga-action="Download"
+             data-ga-label="Download {{ site.current_version }}"
+             aria-label="Baixar Bootstrap">
+            Baixar
+          </a>
+        </div>
+
+        <p class="text-muted mb-0">
+          Versão atual {{ site.current_version }}
+        </p>
+      </div>
+    </div>
+
+    {% include ads.html %}
+  </div>
+</main>
+
+<section class="masthead-followup row m-0 border border-white" aria-labelledby="followup-heading" role="region">
+  <h2 id="followup-heading" class="sr-only">Próximos passos do Bootstrap</h2>
+
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    {% include icons/import.svg width="32" height="32" class="text-primary mb-2" %}
+    <h3>Instalação</h3>
+    <p>Obtenha o código fonte Sass e JavaScript via npm, Compose ou Meteor. As instalações gerenciadas por pacotes não incluem a documentação, mas incluem nosso sistema de compilação e o leia-me.</p>
+
+    {% highlight sh %}
+    npm install bootstrap
+    {% endhighlight %}
+
+    {% highlight sh %}
+    gem install bootstrap -v {{ site.current_ruby_version }}
+    {% endhighlight %}
+
+    <hr class="half-rule">
+    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" aria-label="Veja como instalar Bootstrap">Veja como instalar</a>
+  </div>
+
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    {% include icons/download.svg width="32" height="32" class="text-primary mb-2" %}
+    <h3>BootstrapCDN</h3>
+    <p>Se você precisar apenas do CSS ou JS compilados do Bootstrap, você pode usar o <a href="https://www.bootstrapcdn.com/" rel="noopener noreferrer" target="_blank">BootstrapCDN</a>.</p>
+
+    <h5>Apenas CSS</h5>
+    {% highlight html %}
+    <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+    {% endhighlight %}
+
+    <h5>JS, Popper.js, e jQuery</h5>
+    {% highlight html %}
+    <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous" defer></script>
+    <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous" defer></script>
+    <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous" defer></script>
+    {% endhighlight %}
+    <hr class="half-rule">
+    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/" aria-label="Explorar documentação do Bootstrap">Explorar documentação</a>
+  </div>
+
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    {% include icons/lightning.svg width="32" height="32" class="text-primary mb-2" %}
+    <h3>Temas Oficiais</h3>
+    <p>
+      Leve o Bootstrap 4 para o próximo nível com temas premium e kits de ferramentas oficiais criados em Bootstrap com novos componentes, plugins, docs e ferramentas de compilação.
+    </p>
+    <img class="img-fluid mt-3 mx-auto"
+         src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-themes.png"
+         alt="Imagem promocional de temas oficiais do Bootstrap"
+         width="1024" height="388"
+         loading="lazy" decoding="async">
+
+    <hr class="half-rule">
+    <a href="{{ site.themes }}" class="btn btn-outline-primary" rel="noopener noreferrer" aria-label="Comprar temas do Bootstrap">Comprar temas</a>
+  </div>
+</section>
+
